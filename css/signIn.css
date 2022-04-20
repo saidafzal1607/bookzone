@@ -1,0 +1,140 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+body{
+    font-family:  sans-serif;
+    background: url('../images/main-bg.jpg');
+}
+/* header */
+
+.header{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+}
+.header__nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+}
+
+.nav__logo{
+    color: #C9AC8C;
+    font-size: 25px;
+}
+
+.nav__list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__item{
+    margin: 0 8px;
+}
+
+.nav__link{
+    color: #FFFFFF;
+    font-size: 16px;
+    padding: 10px;
+    position: relative;
+}
+
+.nav__link::before{
+    content: '';
+    position: absolute;
+    bottom: -26.5px;
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #FFFFFF;
+    transition: .5s ease;
+}
+.nav__link:hover::before{
+    width: 80%;
+}
+
+
+.nav__btn{
+    cursor: pointer;
+    padding: 16px 77px;
+    font-size: 16px;
+    background: #C9AC8C;
+    border-radius: 4px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    
+}
+
+/*header*/
+
+/*form*/
+main{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 400px;
+    width: 100%;
+    margin:0  auto;
+    margin-top: 20px;
+
+}
+.form__title{
+    color: #C9AC8C;
+}
+.form__text{
+    text-align: center;
+    color: #999;
+}
+
+.form input{
+    max-width: 386px;
+    width: 100%;
+    height: 48px;
+    margin-top: 16px;
+    padding: 0 16px;
+    background-color: #333030;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #999;
+    border: none;
+    outline: none;
+}
+
+#btn{
+    cursor: pointer;
+    color: #000;
+    background-color: #C9AC8C;
+}
+.form__link{
+    margin-top: 20px;
+    color: #4B4B4A;
+}

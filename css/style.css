@@ -71,7 +71,7 @@ body{
     transition: .5s ease;
 }
 .nav__link:hover::before{
-    width: 100%;
+    width: 80%;
 }
 
 
@@ -104,10 +104,11 @@ body{
     font-weight: 100;
 }
 .slider__dots{
-    margin-top: 10px;
+    padding: 20px 0;
     display: flex;
     align-items: center;
     column-gap: 10px;
+    margin-bottom: 70px;
 }
 
 
@@ -122,4 +123,101 @@ body{
 
 .active__dot{
     background: #FFFFFF;
+}
+.search{
+    position: relative;
+    bottom: 50px;
+}
+
+.search__inner{
+    max-width: 1110px;
+    width: 100%;
+    margin: 0 auto;
+    background: #191919;
+    text-align: center;
+    box-shadow: 0px 4px 77px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    padding: 35px;
+}
+.search__form{
+    display: flex;
+}
+.search__input{
+    max-width: 900px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #999;
+    font-size: 16px;
+    background: #404040;
+    border-radius: 15px;
+    padding: 0 18px;
+}
+
+.search__title{
+    color: #C9AC8C;
+    margin-bottom: 15px;
+}
+
+.search__btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 38px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 15px;
+}
+
+.search__icon{
+    margin-right: 7px;
+}
+
+
+/*------------categories -----------------------------*/
+
+.categories__header{
+    text-align: center;
+}
+.categories__title{
+    color: #C9AC8C;
+    font-size: 31px;
+}
+.categories__list{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 50px;
+}
+
+.categories__link{
+    padding: 10px;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.active{
+    color: #C9AC8C;
+}
+
+.categories__wrapper-card{
+    margin: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 30px;
+}
+
+.categories__card{
+    margin-bottom:20px ;
+    color: #999;
+}
+
+.book__title{
+    color: #C9AC8C;
 }
