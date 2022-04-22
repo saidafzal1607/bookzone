@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn</title>
+    <link rel="stylesheet" href="./css/signIn.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="header__nav">
+                <a class="nav__logo" href="#" >
+                    BADIIYAT
+                </a>
+
+                <button class="nav__btn">
+                    SIGN UP
+                </button>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h1 class="form__title">KIRISH</h1>
+        <form  onclick="register" id="form">
+            
+            <input   name="email" placeholder="Elektron pochta" type="email" >
+            <input  name="parol" placeholder="Parol" type="password" >
+            <button id="btn"  >Kirish</button>
+        </form>
+        <a class="form__link" href="#" >Accountingiz bormi?</a>
+    </main>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/signIn.js"></script>
+</body>
+</html>
