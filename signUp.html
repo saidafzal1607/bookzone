@@ -15,26 +15,31 @@
                     BADIIYAT
                 </a>
 
-                <button class="nav__btn">
-                    Kirish
-                </button>
+                <a href="./signIn.html" class="nav__btn">
+                    SIGN IN
+                </a>
             </nav>
         </div>
     </header>
     <main>
+        <h1 class="form__title">Ro'yxatdan O'ting</h1>
+        <p class="form__text">
+            Do'stlaringiz nima o'qiyotganini ko'ring, kitob tavsiyalarini oling  va kitob ustida zavqli suhbatlar uyushtiring
+        </p>
         <form  class="form">
-            <h1 class="form__title">Ro'yxatdan O'ting</h1>
-            <p class="form__text">
-                Do'stlaringiz nima o'qiyotganini ko'ring, kitob tavsiyalarini oling  va kitob ustida zavqli suhbatlar uyushtiring
-            </p>
-            <input class="fullName" placeholder="Ism va Familya" type="text" >
-            <input class="email" placeholder="Elektron pochta" type="email" >
-            <input class="tell" placeholder="Telefon" type="number" >
-            <input class="parol" placeholder="Parol" type="password" >
-            <input class="parol" placeholder="Parol" type="password" >
-            <input id="btn" type="button" value="Ro'yxatdan O'tish" >
-            <a class="form__link" href="#" >Accountingiz bormi?</a>
+            <input required name="fName"  placeholder="Ism " type="text" >
+            <input required name="lName"  placeholder=" Familya" type="text" >
+            <input required name="email"  placeholder="Elektron pochta" type="email" >
+            <input required name="tell"  placeholder="Telefon" type="number" >
+            <input required name="parol"  placeholder="Parol" type="text" >
+            <input required name="parol2"  placeholder="Parol2" type="text" >
+            <p id="msg"></p>
+            <button id="btn"  >Ro'yxatdan o'tish</button>
         </form>
+        <a class="form__link" href="#" >Accountingiz bormi?</a>
     </main>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/signUp.js"></script>
 </body>
 </html>

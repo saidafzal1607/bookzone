@@ -16,20 +16,23 @@
                 </a>
 
                 <button class="nav__btn">
-                    Kirish
+                    SIGN UP
                 </button>
             </nav>
         </div>
     </header>
     <main>
-        <form  class="form">
-            <h1 class="form__title">KIRISH</h1>
+        <h1 class="form__title">KIRISH</h1>
+        <form  onclick="register" id="form">
             
-            <input class="email" placeholder="Elektron pochta" type="email" >
-            <input class="parol" placeholder="Parol" type="password" >
-            <input id="btn" type="button" value="KIRISH" >
-            <a class="form__link" href="#" >Accountingiz bormi?</a>
+            <input   name="email" placeholder="Elektron pochta" type="email" >
+            <input  name="parol" placeholder="Parol" type="password" >
+            <button id="btn"  >Kirish</button>
         </form>
+        <a class="form__link" href="#" >Accountingiz bormi?</a>
     </main>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/signIn.js"></script>
 </body>
 </html>
