@@ -1,4 +1,9 @@
 let register = document.querySelector('.form');
+
+let button = document.querySelector('.nav__btn');
+button.addEventListener('click', function(){
+    location.pathname = '/signIn.html'
+})
 // let navBtn = document.querySelector('.nav__btn');
 // navBtn.addEventListener('click', function(e){
 //     e.preventDefault()
@@ -37,9 +42,10 @@ register.addEventListener('submit', function(e){
             body:JSON.stringify(user)
         })
         const data = await res.json();
-        console.log(data)
+        console.log(data.user)
         if(data.success){
-            localStorage.setItem("token", data.token);
+            localStorage.setItem("token", JSON.stringify(data.token))
+            localStorage.setItem("user", JSON.stringify(data.user))
             location.pathname = '/index.html'
 
         }
