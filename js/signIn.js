@@ -20,7 +20,7 @@ register.addEventListener('submit', function(e){
         const data = await res.json();
         console.log(data.user)
         if(data.success){
-            localStorage.setItem("token", JSON.stringify(data.token))
+            localStorage.setItem("token", data.token)
             localStorage.setItem("user", JSON.stringify(data.user))
             location.pathname = '/index.html'
         }
