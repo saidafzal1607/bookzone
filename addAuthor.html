@@ -10,17 +10,18 @@
 <body>
     <div class="row">
         <div class="col-1">
-            <img class="book-img" src="./images/books/ulug'bek.png" alt="ulug'bek" >
-            <h1 class="book-title">Ulug'bek Xazinasi</h1>
-            <button class="up-btn btn">Upload Cover</button>
+            <div id="author-img"></div>
+            <!-- <input type="file" > -->
+            <h1 class="author-title">Writer</h1>
+            <input type="file"  class="up-btn btn"  id="image_input"  />
         </div>
         <div class="col-2">
-            <h2 class="title">Add book</h2>
+            <h2 class="title">Add Author</h2>
             <form  id="form">
                 <input name="fName"   placeholder="first-name"   type="text">
                 <input name="lName"   placeholder="last-name"   type="text">
-                <input name="birth_date"    placeholder="birth-date"    type="number">
-                <input name="death_date"   placeholder="death_date"   type="number">
+                <input name="birth_date"    placeholder="birth-date"    type="date">
+                <input name="death_date"   placeholder="death_date"   type="date">
                 <!-- <input name="country" placeholder="country" type="text">
                 <input name="author"  placeholder="author"  type="text"> -->
                 <textarea name="description" id="description" cols="42" rows="5"></textarea>
