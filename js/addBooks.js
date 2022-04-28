@@ -1,23 +1,32 @@
-// let book = {
-//     "title": "The Adventures of Tom Sawyer",
-//     "description": "The Adventures of Tom Sawyer is an 1876 novel by Mark Twain about a boy growing up along the Mississippi River. It is set in the 1840s in the town of St. Petersburg, ",
-//     "author": "60f0224792ce9f6d804c994f",
-//     "country": "United States of America",
-//     "files": "File",
-//     "language": "English",
-//     "link": "https://en.wikipedia.org/wiki/The_Adventures_of_Tom_Sawyer",
-//     "pages": 274,
-//     "year": 1876,
-//     "rate": 4,
-//     "price": 10.92,
-//     "category": "classic | biography | science",
-//     "isPublished": true
-// }
-
-// let user = JSON.parse(localStorage.getItem("user"))
-
 
 let bookForm = document.getElementById('form');
+
+const select = document.getElementById('author');
+
+select.addEventListener('select',function(e){
+    console.log(e)
+})
+
+
+async function getAuthorsId(){
+    let  html = '';
+    
+    let res = await fetch('https://bookzon.herokuapp.com/api/authors');
+    let data = await res.json();
+    for (let item of data.payload){
+        html += `
+            <option class="option" id="${item._id}"  value="${item._id}" >${item.firstName}</option>
+        `
+        select.innerHTML = html;
+
+        
+    }
+    console.log(html)
+}
+
+getAuthorsId()
+
+
 bookForm.addEventListener('submit', function(e){
     e.preventDefault()
     let book = {
@@ -32,18 +41,21 @@ bookForm.addEventListener('submit', function(e){
     console.log(book)
 
     async function addBooks(){
-        const res = await fetch('https://bookzon.herokuapp.com/api/books',{
+        let res = await fetch('https://bookzon.herokuapp.com/api/books',{
             method :'POST',
             headers:
             {
-                "Content-Type":"application/json",
-                "Authorization": "Bearer " + localStorage.getItem("token"),
+                "Content-Type" : "application/json",
+                "Authorization" : "Bearer " + localStorage.getItem("token"),
 
             },
             body: JSON.stringify(book),
         });
-        const data = await res.json();
+        let data = await res.json();
         console.log(data)
+        if(data.success){
+            location.pathname = '/book.html'
+        }
         
 
     }

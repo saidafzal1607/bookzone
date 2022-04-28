@@ -21,10 +21,12 @@
     width: 100%;
 }
 
-.book-img{
+.author-img{
+    width: 245px;
+    height: 245px;
     margin-top: 30px;
 }
-.book-title{
+.author-title{
     margin: 15px 0;
     font-family: sans-serif;
 }
